@@ -3,12 +3,14 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
+from Utils.browserutils import Browserutils
 
-class Checkout_confirmation:
 
+class Checkout_confirmation(Browserutils):
 
     def __init__(self, driver):
         self.driver = driver
+        super().__init__(driver)  # initalize util parent class driver
         self.checkout_button = (By.XPATH, "//button[@class='btn btn-success']")
         self.country_input = (By.ID, "country")
         self.country_option = (By.LINK_TEXT, "India")

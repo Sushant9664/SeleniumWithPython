@@ -1,13 +1,16 @@
 
 
 from selenium.webdriver.common.by import By
+
+from Utils.browserutils import Browserutils
 from pageObjects.checkout_confirmation import Checkout_confirmation
 
 
-class Shoppage:
+class Shoppage(Browserutils):
 
     def __init__(self, driver):
         self.driver = driver
+        super().__init__(driver)  # initalize util parent class driver
         self.shoplink = (By.CSS_SELECTOR, " a[href*='shop']")
         self.productname = (By.XPATH, "//div[@class='card h-100']")
         self.checkoputbutton = (By.CSS_SELECTOR, "a[class*='btn-primary']")

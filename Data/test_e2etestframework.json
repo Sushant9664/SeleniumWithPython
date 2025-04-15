@@ -1,0 +1,18 @@
+{
+   "data" : [
+    {
+        "Name" : "sushant",
+        "emailid" : "sushantwaykar@gmail.com",
+        "password" : "Test@12345",
+        "Product" : "Blackberry"
+    },
+
+    {
+        "Name" : "sushant",
+        "emailid" : "r@gmail.com",
+        "password" : "Test@12345",
+        "Product" : "Nokia Edge"
+    }
+]
+
+}
